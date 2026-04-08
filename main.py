@@ -11,7 +11,7 @@ st.set_page_config(page_title="Care-AI Pro", layout="wide")
 # ================= SENSOR =================
 def get_sensor_data():
     try:
-        data = requests.get("http://127.0.0.1:5000/sensor").json()
+        data = requests.get("https://care-ai-health-system.vercel.app/api/sensor").json()
         return data["hr"], data["bp"], data["spo2"], data["sugar"]
     except:
         return (
